@@ -3,7 +3,7 @@ import { faker } from "@faker-js/faker"
 import { User, userData } from "../models/User"
 import UserApi, { userApi } from "../api/UserApi"
 
-describe('todo item test suite', () => {
+describe('todo item test suites', () => {
 
     it('user should be able to add todo item', () => {
         var todo_name = faker.string.alpha(30)
