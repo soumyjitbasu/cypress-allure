@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","3573","should be able to register","","Sun Jun 22 07:19:33 GMT 2025","passed","Sun Jun 22 07:19:37 GMT 2025","","user test suite","",""
+"","2310","should be able to delete the added todos","","Sun Jun 22 07:19:26 GMT 2025","passed","Sun Jun 22 07:19:29 GMT 2025","","todo item test suites","",""
+"","3635","user should be abl to add todo items","","Sun Jun 22 07:19:23 GMT 2025","passed","Sun Jun 22 07:19:26 GMT 2025","","todo item test suites","",""
