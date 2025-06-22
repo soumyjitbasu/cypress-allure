@@ -5,7 +5,7 @@ import UserApi, { userApi } from "../api/UserApi"
 
 describe('todo item test suites', () => {
 
-    it('user should be able to add todo item', () => {
+    it('user should be abl to add todo item', () => {
         var todo_name = faker.string.alpha(30)
         const user = new User()
         userApi.userRegistration(user).then((resRegistration)=>{

@@ -15,7 +15,7 @@ jobs:
       - name: Run cypress tests
         run: npx cypress run 
 
-      - name: Get Allure History
+      - name: Get Allure history
         uses: actions/checkout@v2
         continue-on-error: true
         with:
