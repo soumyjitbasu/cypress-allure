@@ -18,7 +18,7 @@ describe('todo item test suites', () => {
         cy.get('[data-testid="todo-text"').should('contain', todo_name)
     })
 
-    it('should be able to delete the added todo', () => {
+    it('should be able to delete the added todos', () => {
         var todo_name = faker.string.alpha(30)
         let token = String
         const user = new User()
