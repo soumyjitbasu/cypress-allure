@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","3267","user should be abl to add todo item","","Tue Jun 24 06:56:08 GMT 2025","passed","Tue Jun 24 06:56:11 GMT 2025","","todo item test suites","",""
+"","4","Login to social platform","","Tue Jun 24 06:56:04 GMT 2025","passed","Tue Jun 24 06:56:04 GMT 2025","","this a test scenario for website origin change","",""
+"","3363","should be able to register","","Tue Jun 24 06:56:18 GMT 2025","passed","Tue Jun 24 06:56:22 GMT 2025","","user test suite","",""
+"","2246","should be able to delete the added todos","","Tue Jun 24 06:56:11 GMT 2025","passed","Tue Jun 24 06:56:13 GMT 2025","","todo item test suites","",""
