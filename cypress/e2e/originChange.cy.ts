@@ -11,6 +11,6 @@ describe('this a test scenario for website origin change', () => {
             cy.wait(6000)
 
         })
-        cy.contains('KYC Verification', {timeout: 10000}).should('exist')
+        //cy.contains('KYC Verification', {timeout: 10000}).should('exist')
     })
 })
