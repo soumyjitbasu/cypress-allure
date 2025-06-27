@@ -14,7 +14,6 @@ describe('This is a test for opening SE Social and verifying the Home Feed post'
         cy.get('@userLoginData').then((userLoginData: any) => {
             const login = new LoginPage()
             login.loginWithSE(userLoginData.username, userLoginData.password)
-            cy.wait(10000)
 
         })
 
