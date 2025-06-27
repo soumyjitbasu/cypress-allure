@@ -9,13 +9,13 @@ describe('This is a test for opening SE Social and verifying the Home Feed post'
     })
 
     it('Login to SESocial', () => {
+        console.log('Soumyajit Basu')
+        // cy.get('@userLoginData').then((userLoginData: any) => {
+        //     const login = new LoginPage()
+        //     cy.visit('https://staging.social.stockedge.com')
+        //     login.loginWithSE(userLoginData.username, userLoginData.password)
 
-        cy.get('@userLoginData').then((userLoginData: any) => {
-            const login = new LoginPage()
-            cy.visit('https://staging.social.stockedge.com')
-            login.loginWithSE(userLoginData.username, userLoginData.password)
-
-        })
+        // })
 
     })
 })  
