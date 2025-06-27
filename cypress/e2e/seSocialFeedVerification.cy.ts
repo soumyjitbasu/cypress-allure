@@ -3,9 +3,7 @@ import { LoginPage } from "../support/page_objects/loginPageObject"
 describe('This is a test for opening SE Social and verifying the Home Feed post', () => {
 
     beforeEach('open SESocial staging environment', () => {
-Cypress.session.clearAllSavedSessions()
-        cy.visit('https://staging.social.stockedge.com',{timeout:10000})
-
+        Cypress.session.clearAllSavedSessions()
         cy.fixture('../fixtures/userLogin.json').as('userLoginData',)
 
     })
@@ -14,6 +12,7 @@ Cypress.session.clearAllSavedSessions()
 
         cy.get('@userLoginData').then((userLoginData: any) => {
             const login = new LoginPage()
+            cy.visit('https://staging.social.stockedge.com')
             login.loginWithSE(userLoginData.username, userLoginData.password)
 
         })

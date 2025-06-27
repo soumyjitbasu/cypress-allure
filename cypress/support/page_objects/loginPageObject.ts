@@ -11,6 +11,7 @@ export class LoginPage{
     // clicking login with SE button
     loginWithSE(email, password){
         this.loginPageElements.btnLoginWithSE().click()
+        cy.wait(5000)
         cy.origin('https://staging1-accounts.stockedge.com/', {args: {email, password}},({email,password})=>{
             cy.get('#Username').type(email)
             cy.get('#Password').type(password)
