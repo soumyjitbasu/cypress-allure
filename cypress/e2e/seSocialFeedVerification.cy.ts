@@ -5,12 +5,13 @@ describe('This is a test for opening SE Social and verifying the Home Feed post'
     beforeEach('open SESocial staging environment', () => {
 
         cy.visit('https://staging.social.stockedge.com',{timeout:10000})
+        cy.get('[data-testid="login-button"]').click()
         cy.fixture('../fixtures/userLogin.json').as('userLoginData',)
 
     })
 
     it('Login to SESocial', () => {
-
+        
         cy.get('@userLoginData').then((userLoginData: any) => {
             const login = new LoginPage()
             login.loginWithSE(userLoginData.username, userLoginData.password)
