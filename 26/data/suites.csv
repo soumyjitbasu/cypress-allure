@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","13","Login to SESocial","","Fri Jun 27 05:35:04 GMT 2025","passed","Fri Jun 27 05:35:04 GMT 2025","","This is a test for opening SE Social and verifying the Home Feed post","",""
+"","2168","should be able to delete the added todos","","Fri Jun 27 05:35:11 GMT 2025","passed","Fri Jun 27 05:35:13 GMT 2025","","todo item test suites","",""
+"","2927","should be able to register","","Fri Jun 27 05:35:18 GMT 2025","passed","Fri Jun 27 05:35:21 GMT 2025","","user test suite","",""
+"","3294","user should be abl to add todo item","","Fri Jun 27 05:35:08 GMT 2025","passed","Fri Jun 27 05:35:11 GMT 2025","","todo item test suites","",""
+"","3","Login to social platform","","Fri Jun 27 05:35:01 GMT 2025","passed","Fri Jun 27 05:35:01 GMT 2025","","this a test scenario for website origin change","",""
