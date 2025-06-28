@@ -1,3 +1,5 @@
+import { any } from "cypress/types/bluebird"
+import { HomePage } from "../support/page_objects/homePageObjects"
 import { LoginPage } from "../support/page_objects/loginPageObject"
 
 describe('This is a test for opening SE Social and verifying the Home Feed post', () => {
@@ -5,17 +7,19 @@ describe('This is a test for opening SE Social and verifying the Home Feed post'
     beforeEach('open SESocial staging environment', () => {
         Cypress.session.clearAllSavedSessions()
         cy.fixture('../fixtures/userLogin.json').as('userLoginData',)
+        cy.fixture('../fixtures/postCreation.json').as('postData')
 
     })
 
-    it('Login to SESocial', () => {
+    it('Login to SESocial and creating a post', () => {
         console.log('Soumyajit Basu')
-        // cy.get('@userLoginData').then((userLoginData: any) => {
-        //     const login = new LoginPage()
-        //     cy.visit('https://staging.social.stockedge.com')
-        //     login.loginWithSE(userLoginData.username, userLoginData.password)
+        cy.loginApplication()
+        const homePage = new HomePage()
+        cy.get('@postData').then((postData:any) => {
+            homePage.createQueryWithImageAttachment(postData.pdfdiscussiontext)
+            
+        })
 
-        // })
 
     })
 })  

@@ -17,5 +17,6 @@ export class LoginPage{
             cy.get('#Password').type(password)
             cy.get('[name="button"]').click()
         })
+        
     }
 }

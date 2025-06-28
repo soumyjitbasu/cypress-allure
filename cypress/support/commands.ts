@@ -35,3 +35,20 @@
 //     }
 //   }
 // }
+import { LoginPage } from "../support/page_objects/loginPageObject"
+declare global{
+    namespace Cypress{
+        interface Chainable{
+            loginApplication: Chainable<any>
+        }
+    }
+}
+Cypress.Commands.add('loginApplication',()=>{
+          cy.fixture('../fixtures/userLogin.json').as('userLoginData',)
+    cy.get('@userLoginData').then((userLoginData: any) => {
+                const login = new LoginPage()
+                cy.visit('https://staging.social.stockedge.com')
+                login.loginWithSE(userLoginData.username, userLoginData.password)
+    
+            })
+})
