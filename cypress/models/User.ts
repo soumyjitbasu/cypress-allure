@@ -5,12 +5,14 @@ export class User{
     private lastName:string
     private email:string
     private password:string
+    private userName:string
 
     constructor(){
         this.firsName = faker.person.firstName()
         this.lastName = faker.person.lastName()
         this.email = faker.internet.email()
         this.password = faker.internet.password()
+        this.userName = faker.internet.username()
     }
 
     getFirstName(){
@@ -27,6 +29,10 @@ export class User{
 
     getPassword(){
         return this.password
+    }
+
+    getUserName(){
+        return this.userName
     }
 }
 
