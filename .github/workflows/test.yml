@@ -13,7 +13,7 @@ jobs:
       - name: Install Dependencies
         run: npm ci
       - name: Run cypress tests
-        run: npx cypress run grep=conduit
+        run: npx cypress run --env grep=conduit
 
       - name: Get Allure history
         uses: actions/checkout@v2
