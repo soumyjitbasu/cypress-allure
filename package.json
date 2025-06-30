@@ -13,6 +13,7 @@
     "@shelex/cypress-allure-plugin": "^2.41.2",
     "cypress": "^14.5.0",
     "cypress-file-upload": "^5.0.8",
+    "cypress-xpath": "^2.0.1",
     "random-email": "^1.0.3",
     "typescript": "^5.8.3"
   }
