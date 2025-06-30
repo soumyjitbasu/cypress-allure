@@ -1,6 +1,7 @@
 import { defineConfig } from "cypress";
 import allureWriter from "@shelex/cypress-allure-plugin/writer";
 
+
 export default defineConfig({
   defaultCommandTimeout: 5000,
   pageLoadTimeout: 80000,
@@ -11,10 +12,12 @@ export default defineConfig({
     video: true,
     retries: 0,
     setupNodeEvents(on, config) {
+      require('@cypress/grep/src/plugin')(config);
       allureWriter(on, config);
       return config;
     },
     env: {
+      grepFilterSpecs: true,
       allure: true,
       allureAttachRequest: true,
       allureAddVideoOnPass: true,

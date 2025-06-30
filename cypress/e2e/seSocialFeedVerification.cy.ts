@@ -3,6 +3,7 @@ import { LoginPage } from "../support/page_objects/loginPageObject"
 import { faker } from "@faker-js/faker/."
 import 'cypress-xpath'
 import { User } from "../models/User"
+import { any } from "cypress/types/bluebird"
 
 
 describe('This is a test for opening SE Social and verifying the Home Feed post', () => {
@@ -21,7 +22,7 @@ describe('This is a test for opening SE Social and verifying the Home Feed post'
         Cypress.LocalStorage.clear()
     })
 
-    it('Login to SESocial and creating a post', () => {
+    it('Login to SESocial and creating a post SESocial', () => {
         console.log('Soumyajit Basu')
         cy.loginApplication()
         const homePage = new HomePage()
@@ -33,7 +34,7 @@ describe('This is a test for opening SE Social and verifying the Home Feed post'
         })
     })
 
-    it('Conduit site user creation', () => {
+    it('Conduit site user creation conduit',() => {
 
         const user_data = new User()
         cy.request({
@@ -80,7 +81,7 @@ describe('This is a test for opening SE Social and verifying the Home Feed post'
         })
     })
 
-    it('Mocking Tags', () => {
+    it('Mocking Tags conduit', () => {
         cy.visit('https://conduit.bondaracademy.com/login')
         cy.get('[placeholder="Email"]').type('soumybasu10@gmail.com')
         cy.get('[placeholder="Password"]').type('Soumyajit@2022')
@@ -90,7 +91,7 @@ describe('This is a test for opening SE Social and verifying the Home Feed post'
 
     })
 
-    it('Mocking tag list using login api call', () => {
+    it('Mocking tag list using login api call conduit', () => {
         cy.request({
             url: 'https://conduit-api.bondaracademy.com/api/users/login',
             method: 'POST',
@@ -117,7 +118,7 @@ describe('This is a test for opening SE Social and verifying the Home Feed post'
             .and('contain', 'Testing')
     })
 
-    it.only('login using xpath in Cypress',()=>{
+    it('login using xpath in Cypress conduit',()=>{
         cy.visit('https://conduit.bondaracademy.com/login')
         cy.xpath('//input[@formcontrolname="email"]').type('soumybasu10@gmail.com')
         cy.xpath('//input[@placeholder="Password"]').type('Soumyajit@2022')
