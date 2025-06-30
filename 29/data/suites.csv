@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","3","Login to social platform","","Mon Jun 30 02:18:19 GMT 2025","passed","Mon Jun 30 02:18:19 GMT 2025","","this a test scenario for website origin change","",""
+"","2016","login using xpath in Cypress","","Mon Jun 30 02:18:26 GMT 2025","passed","Mon Jun 30 02:18:28 GMT 2025","","This is a test for opening SE Social and verifying the Home Feed post","",""
+"","1719","should be able to delete the added todos","","Mon Jun 30 02:18:36 GMT 2025","passed","Mon Jun 30 02:18:38 GMT 2025","","todo item test suites","",""
+"","2241","user should be abl to add todo item","","Mon Jun 30 02:18:34 GMT 2025","passed","Mon Jun 30 02:18:36 GMT 2025","","todo item test suites","",""
+"","2619","should be able to register","","Mon Jun 30 02:18:42 GMT 2025","passed","Mon Jun 30 02:18:45 GMT 2025","","user test suite","",""
