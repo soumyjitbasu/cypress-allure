@@ -16,7 +16,7 @@ describe('This is a test for opening SE Social and verifying the Home Feed post'
 
     })
 
-    afterEach('Clearing the session',()=>{
+    afterEach('Clearing the session', () => {
         Cypress.session.clearAllSavedSessions()
         Cypress.session.clearCurrentSessionData()
         Cypress.LocalStorage.clear()
@@ -34,7 +34,7 @@ describe('This is a test for opening SE Social and verifying the Home Feed post'
         })
     })
 
-    it('Conduit site user creation conduit',() => {
+    it('Conduit site user creation conduit', () => {
 
         const user_data = new User()
         cy.request({
@@ -105,7 +105,7 @@ describe('This is a test for opening SE Social and verifying the Home Feed post'
                 'Content-Type': 'application/json',
                 'Accept': 'application/json, text/plain, */*'
             }
-        }).then(resLogin =>{
+        }).then(resLogin => {
             expect(resLogin.status).to.equal(200)
         })
         cy.visit('https://conduit.bondaracademy.com/login')
@@ -118,16 +118,56 @@ describe('This is a test for opening SE Social and verifying the Home Feed post'
             .and('contain', 'Testing')
     })
 
-    it('login using xpath in Cypress conduit',()=>{
+    it('login using xpath in Cypress conduit', () => {
         cy.visit('https://conduit.bondaracademy.com/login')
         cy.xpath('//input[@formcontrolname="email"]').type('soumybasu10@gmail.com')
         cy.xpath('//input[@placeholder="Password"]').type('Soumyajit@2022')
         cy.xpath('//button[contains(text(),"Sign")]').click()
-        if (cy.xpath('//a[contains(text(),"soumybasu")]').should('be.visible')){
-            cy.xpath('//a[contains(text(),"soumybasu")]').should('contain',' soumybasu ')
+        if (cy.xpath('//a[contains(text(),"soumybasu")]').should('be.visible')) {
+            cy.xpath('//a[contains(text(),"soumybasu")]').should('contain', ' soumybasu ')
         }
-        console.log(cy.xpath('//a[contains(text(),"soumybasu")]').invoke('attr','href'))
-        cy.xpath('//a[contains(text(),"soumybasu")]').invoke('attr','href').should('equal','/profile/soumybasu')
+        console.log(cy.xpath('//a[contains(text(),"soumybasu")]').invoke('attr', 'href'))
+        cy.xpath('//a[contains(text(),"soumybasu")]').invoke('attr', 'href').should('equal', '/profile/soumybasu')
+    })
+
+    it.only('Favorite club - conduit', () => {
+        cy.visit('https://social.stockedge.com')
+        cy.wait(8000)
+
+        cy.get('[data-testid="login-button"]').click()
+        cy.origin('https://accounts.stockedge.com', () => {
+
+            cy.get('[name="Username"]').type('anuska.sinha@stockedge.com')
+            cy.get('[id="Password"]').type('Anuska#2000')
+            cy.get('[type="submit"]').click()
+
+        })
+        cy.wait(8000)
+        cy.get('[data-tut="reactour__home"]').should('contain.text', 'Home')
+
+        cy.intercept('POST', 'https://apisocial.stockedge.com/', (req) => {
+            if (req.body.operationName == 'getFavouriteClubsOfUser') {
+                req.alias = 'favouriteClubs'
+            }
+        });
+
+        // assert that a matching request has been made
+        cy.reload()
+        cy.wait('@favouriteClubs').then((interceptionResult) => {
+            cy.log('abc', interceptionResult.response.body.data.getFavouriteClubsOfUser);
+            const favouriteClubData = interceptionResult.response.body.data.getFavouriteClubsOfUser
+            const clubNames = [];
+            for (let i = 0; i < favouriteClubData.length; i++) {
+                clubNames.push(favouriteClubData[i].clubName);
+                cy.get('[class="MuiListItem-root MuiListItem-gutters css-1mpfgc2"]').then(headerList => {
+                    cy.wrap(headerList).eq(i).should('contain', clubNames[i])
+                })
+            }
+            console.log(clubNames);
+
+
+
+        })
     })
 
 })  
