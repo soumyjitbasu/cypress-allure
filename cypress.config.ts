@@ -3,6 +3,7 @@ import allureWriter from "@shelex/cypress-allure-plugin/writer";
 
 
 export default defineConfig({
+  projectId: 'qy6eid',
   defaultCommandTimeout: 5000,
   pageLoadTimeout: 80000,
   requestTimeout: 7000,

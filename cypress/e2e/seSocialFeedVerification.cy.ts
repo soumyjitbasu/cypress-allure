@@ -62,7 +62,7 @@ describe('This is a test for opening SE Social and verifying the Home Feed post'
         })
     })
 
-    it('API intercept', () => {
+    it('SMOKE - API intercept', () => {
         const user_data = new User()
         cy.visit('https://conduit.bondaracademy.com/')
         cy.intercept('POST', '').as('resgisterUser')
