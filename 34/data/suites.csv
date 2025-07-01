@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","300","Conduit site user creation conduit","","Tue Jul 01 03:56:11 GMT 2025","passed","Tue Jul 01 03:56:11 GMT 2025","","This is a test for opening SE Social and verifying the Home Feed post","",""
+"","2351","Mocking Tags conduit","","Tue Jul 01 03:56:14 GMT 2025","passed","Tue Jul 01 03:56:17 GMT 2025","","This is a test for opening SE Social and verifying the Home Feed post","",""
+"","4","Login to SESocial and creating a post SESocial","","Tue Jul 01 03:56:11 GMT 2025","skipped","Tue Jul 01 03:56:11 GMT 2025","","This is a test for opening SE Social and verifying the Home Feed post","",""
+"","2","SMOKE - API intercept","","Tue Jul 01 03:56:14 GMT 2025","skipped","Tue Jul 01 03:56:14 GMT 2025","","This is a test for opening SE Social and verifying the Home Feed post","",""
+"","1373","Mocking tag list using login api call conduit","","Tue Jul 01 03:56:17 GMT 2025","passed","Tue Jul 01 03:56:18 GMT 2025","","This is a test for opening SE Social and verifying the Home Feed post","",""
+"","1098","login using xpath in Cypress conduit","","Tue Jul 01 03:56:18 GMT 2025","passed","Tue Jul 01 03:56:19 GMT 2025","","This is a test for opening SE Social and verifying the Home Feed post","",""
