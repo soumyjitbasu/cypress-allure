@@ -9,7 +9,7 @@ describe('this a test scenario for website origin change', () => {
         //     cy.get('#Password').type('Soumyajit@2022')
         //     cy.get('#login-btn').click()
         //     cy.wait(6000)
-
+        //comment
         // })
         //cy.contains('KYC Verification', {timeout: 10000}).should('exist')
     })
