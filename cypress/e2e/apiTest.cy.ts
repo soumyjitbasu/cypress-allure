@@ -1,6 +1,6 @@
 describe('API Testing Scenarios', () => {
 
-    it('Authorization', () => {
+    it('Conduit Authorization', () => {
         cy.request({
             url: 'https://restful-booker.herokuapp.com/auth',
             method: 'POST',
@@ -18,7 +18,7 @@ describe('API Testing Scenarios', () => {
         })
     })
 
-    it('Get Booking', () => {
+    it('Conduit Get Booking', () => {
         cy.request({
             url: 'https://restful-booker.herokuapp.com/booking',
             method: 'GET',
@@ -31,7 +31,7 @@ describe('API Testing Scenarios', () => {
         })
     })
 
-    it('Create Booking', () => {
+    it('Conduit Create Booking', () => {
         cy.request({
             url: 'https://restful-booker.herokuapp.com/booking',
             method: 'POST',
